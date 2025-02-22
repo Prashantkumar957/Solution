@@ -39,6 +39,7 @@ android {
 }
 
 dependencies {
+    implementation ("com.github.barteksc:android-pdf-viewer:2.8.2")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

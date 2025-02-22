@@ -1,6 +1,5 @@
 package io.kodular.technologygyan957.PDF_Book
 
-
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +9,7 @@ import io.kodular.technologygyan957.PDF_Book.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var adapter: ChapterAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +38,11 @@ class MainActivity : AppCompatActivity() {
             "Chapter 15: Probability"
         )
 
+        adapter = ChapterAdapter(this, chapters) { chapter ->
+            val intent = Intent(this, PdfViewerActivity::class.java)
+            intent.putExtra("chapter_name", chapter)
+            startActivity(intent)
+        }
 
 
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
