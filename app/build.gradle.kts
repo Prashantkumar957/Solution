@@ -40,6 +40,8 @@ android {
 
 dependencies {
     implementation ("com.github.barteksc:android-pdf-viewer:2.8.2")
+    implementation ("androidx.cardview:cardview:1.0.0")
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
