@@ -39,10 +39,7 @@ android {
 }
 
 dependencies {
-        implementation("com.android.support:appcompat-v7:28.0.0") // Example
-        implementation("com.github.User:Repo:Tag") // If using JitPack, ensure this is correct
 
-    implementation ("com.github.barteksc:android-pdf-viewer:2.8.2")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
